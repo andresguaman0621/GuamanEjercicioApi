@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuamanEjercicioApi.Views.ClimaActual"
+             Title="ClimaActualAndresGuaman">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="55"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Valor Latitud:" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0"></Label>
+        <Label Text="Valor Longitud:" Grid.Row="0" Grid.Column="1" Margin="10,0,0,0"></Label>
+
+        <Entry Grid.Row="1" Grid.Column="0" x:Name="AGlat" Margin="10,0,40,0"></Entry>
+        <Entry Grid.Row="1" Grid.Column="1" x:Name="AGlon" Margin="10,0,40,0"></Entry>
+
+        <Button Text="CONSULTAR" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Clicked="AGConsultar"  Margin="300,15,300,0"></Button>
+        
+        <!--Estado-->
+        <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
+            <Label Text="Estado del clima: " FontAttributes="Bold" Margin="10,0,0,0"></Label>
+            <Label x:Name="AGweatherLabel"></Label>
+        </StackLayout>
+        <!--Cuidad-->
+        <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.Column="0">
+            <Label Text="Ciudad: " FontAttributes="Bold" Margin="10,0,0,0"></Label>
+            <Label x:Name="AGcityLabel" Margin="10,0,0,0"></Label>
+        </StackLayout>
+        <!--Pais-->
+        <StackLayout Orientation="Horizontal" Grid.Row="6" Grid.Column="0">
+            <Label Text="Pais: " FontAttributes="Bold" Margin="10,0,0,0"></Label>
+            <Label x:Name="AGpaisLabel" Margin="10,0,0,0"></Label>
+        </StackLayout>
+        <!--Temperatura-->
+        <StackLayout Orientation="Horizontal" Grid.Row="7" Grid.Column="0">
+            <Label Text="Temperatura: " FontAttributes="Bold" Margin="10,0,0,0"></Label>
+            <Label x:Name="AGtempLabel" Margin="10,0,0,0"></Label>
+        </StackLayout>
+        <!--Humedad-->
+        <StackLayout Orientation="Horizontal" Grid.Row="8" Grid.Column="0">
+            <Label Text="Humedad: " FontAttributes="Bold" Margin="10,0,0,0"></Label>
+            <Label x:Name="AGhumedadLabel" Margin="10,0,0,0"></Label>
+        </StackLayout>
+
+        <!--<Label Text="Estado del clima: " Grid.Row="4" Grid.Column="0"></Label>
+        <Label Text="Estado del clima: " Grid.Row="4" Grid.Column="1"></Label>-->
+    </Grid>
+</ContentPage>
