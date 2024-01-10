@@ -53,13 +53,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\AGClimaActual.xaml.cs">
+	  <Compile Update="AGViews\AGClimaActual.xaml.cs">
 	    <DependentUpon>AGClimaActual.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\AGClimaActual.xaml">
+	  <MauiXaml Update="AGViews\AGClimaActual.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
